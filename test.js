@@ -3,7 +3,8 @@ const button = document.getElementById("qrcodegenerate");
 const image = document.getElementById("qrcodeimage");
 
 button.addEventListener("click", () => {
-  QRCode.toDataURL("sehr stark ").then((dataUrl) => {
+  QRCode.toDataURL(input.value).then((dataUrl) => {
     console.log(dataUrl);
+    qrcodeimage.src = dataUrl;
   });
 });
